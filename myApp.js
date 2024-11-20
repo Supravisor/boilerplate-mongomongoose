@@ -19,12 +19,11 @@ const createAndSavePerson = (done) => {
 
   johnSmith.save(function(err, data) {
     if (err) {
-        done(err);
+        return done(err);
     } else {
-        done(null, data);
+        return done(null, data);
     }
    });
-
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
